@@ -1,0 +1,30 @@
+[16-Jan-2026 17:04:09 UTC] PHP Warning:  Undefined array key "host" in /workspaces/UX211/.wordpress/wp-includes/pluggable.php on line 1721
+[16-Jan-2026 23:21:50 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1 cannot rollback - no transaction is active in /workspaces/UX211/.wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-translator.php:4234
+Stack trace:
+#0 /workspaces/UX211/.wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-translator.php(4234): PDOStatement->execute(Array)
+#1 /workspaces/UX211/.wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-translator.php(4375): WP_SQLite_Translator->execute_sqlite_query('ROLLBACK')
+#2 /workspaces/UX211/.wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-translator.php(661): WP_SQLite_Translator->rollback()
+#3 /workspaces/UX211/.wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(280): WP_SQLite_Translator->query('UPDATE `wp_user...')
+#4 /workspaces/UX211/.wordpress/wp-includes/class-wpdb.php(2726): WP_SQLite_DB->query('UPDATE `wp_user...')
+#5 /workspaces/UX211/.wordpress/wp-includes/meta.php(324): wpdb->update('wp_usermeta', Array, Array)
+#6 /workspaces/UX211/.wordpress/wp-includes/user.php(1310): update_metadata('user', 1, 'session_tokens', 'a:5:{s:64:"0145...', '')
+#7 /workspaces/UX211/.wordpress/wp-includes/class-wp-user-meta-session-tokens.php(100): update_user_meta(1, 'session_tokens', Array)
+#8 /workspaces/UX211/.wordpress/wp-includes/class-wp-user-meta-session-tokens.php(88): WP_User_Meta_Session_Tokens->update_sessions(Array)
+#9 /workspaces/UX211/.wordpress/wp-includes/class-wp-session-tokens.php(162): WP_User_Meta_Session_Tokens->update_session('6670d3a51f217a1...', Array)
+#10 /workspaces/UX211/.wordpress/wp-includes/class-wp-session-tokens.php(147): WP_Session_Tokens->update('YsyJZevpq33nFQf...', Array)
+#11 /workspaces/UX211/.wordpress/wp-includes/pluggable.php(1129): WP_Session_Tokens->create(1768778510)
+#12 /workspaces/UX211/.wordpress/wp-includes/user.php(115): wp_set_auth_cookie(1, false, false)
+#13 /workspaces/UX211/.wordpress/wp-login.php(1323): wp_signon(Array, false)
+#14 {main}
+  thrown in /workspaces/UX211/.wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-translator.php on line 4234
+[16-Jan-2026 23:22:00 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000]: General error: 1 cannot rollback - no transaction is active in /workspaces/UX211/.wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-translator.php:4234
+Stack trace:
+#0 /workspaces/UX211/.wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-translator.php(4234): PDOStatement->execute(Array)
+#1 /workspaces/UX211/.wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-translator.php(4375): WP_SQLite_Translator->execute_sqlite_query('ROLLBACK')
+#2 /workspaces/UX211/.wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-translator.php(661): WP_SQLite_Translator->rollback()
+#3 /workspaces/UX211/.wordpress/wp-content/mu-plugins/sqlite-database-integration/wp-includes/sqlite/class-wp-sqlite-db.php(280): WP_SQLite_Translator->query('UPDATE `wp_user...')
+#4 /workspaces/UX211/.wordpress/wp-includes/class-wpdb.php(2726): WP_SQLite_DB->query('UPDATE `wp_user...')
+#5 /workspaces/UX211/.wordpress/wp-includes/meta.php(324): wpdb->update('wp_usermeta', Array, Array)
+#6 /workspaces/UX211/.wordpress/wp-includes/user.php(1310): update_metadata('user', 1, 'session_tokens', 'a:5:{s:64:"0145...', '')
+#7 /workspaces/UX211/.wordpress/wp-includes/class-wp-user-meta-session-tokens.php(100): update_user_meta(1, 'session_tokens', Array)
+#8 /workspaces/UX211/.wordpress/wp-includes/class-wp-user-meta-session-tokens.php(88): WP_User_Meta_Session_Tokens->update_sessio
